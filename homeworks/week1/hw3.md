@@ -1,8 +1,8 @@
 ## 教你朋友 CLI
 
-嗨嗨 HOW 哥，既然你誠心誠意地問了，我就大發慈悲的告訴你，首先你要知道 **什麼是Command line**? 
+嗨嗨 HOW 哥，既然你誠心誠意地問了，我就大發慈悲的告訴你，首先你要知道**什麼是Command line**? 
 
-Command Line(CLI) 就是**透過純文字告訴電腦要做什麼**，我們平常要操作電腦都是使用 GUI介面(Graphical User Interface)，比如說點選<我的電腦>圖示，然後進入資料夾，雖然對使用者來說很方便，但是在寫程式的時候，直接透過文字對電腦下指令是比較快速的。
+Command Line (CLI) 就是**透過純文字告訴電腦要做什麼**，我們平常要操作電腦都是使用 GUI 介面 (Graphical User Interface)，比如說點選<我的電腦>圖示，然後進入資料夾，雖然對使用者來說很方便，但是在寫程式的時候，直接透過文字對電腦下指令是比較快速的。
 
  要使用Command Line之前必須先有一個能跟電腦跟溝通的程式。
  MAC：直接搜尋terminal使用或是下載 [iTerm2](https://www.iterm2.com/)
@@ -11,9 +11,9 @@ Command Line(CLI) 就是**透過純文字告訴電腦要做什麼**，我們平�
 #### 基本指令
 以下用Windows示範
 
-* pwd(print working directory)：目前路徑
+* pwd (print working directory)：目前路徑
 
-* ls(list segment):列印出所有檔案和路徑。ls -l 則會顯示更詳細的檔案資料，如檔案屬性、檔案數、建檔日期等
+* ls (list segment)：列印出所有檔案和路徑。ls -l 則會顯示更詳細的檔案資料，如檔案屬性、檔案數、建檔日期等
 
 * cd(change directory)：切換資料夾
    cd.. : 回到上一層
@@ -24,7 +24,7 @@ Command Line(CLI) 就是**透過純文字告訴電腦要做什麼**，我們平�
 
 * mkdir(make directory) : 創建資料夾
 
-* rm　: 刪除檔案，rm file。
+* rm　: 刪除檔案，rm file
   rmdir　: 刪除資料夾，rmfdir folder，若資料夾有東西，會出現目錄不是空的，無法刪除
   rm -r ：rm-r folder 無論資料夾是否有檔案，都能直接刪除，另外要注意的是要回到檔案的上一層資料夾，才能進行刪除
 
