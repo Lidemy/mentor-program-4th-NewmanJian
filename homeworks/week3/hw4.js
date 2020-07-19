@@ -31,9 +31,9 @@ function solve(lines) {
 }
 
 function reverse(str) {
-  let result = '';
+  let res = '';
   for (let i = str.length - 1; i >= 0; i--) {
-    result += str[i];
+    res += str[i];
   }
-  return result;
+  return res;
 }
