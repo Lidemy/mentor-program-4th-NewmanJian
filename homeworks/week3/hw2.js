@@ -22,18 +22,37 @@ rl.on('close', () => {
 // 上面都不用管，只需要完成這個 function 就好，可以透過 lines[i] 拿取內容
 // eslint-disable-next-line
 function solve(lines) {
-  for (let i = 1; i < lines.length; i++) {
-    console.log(isPrime(Number(lines[i])) ? 'Prime' : 'Composite');
+  const input = lines[0].split(' ');
+  const n = Number(input[0]);
+  const m = Number(input[1]);
+  for (let i = n; i <= m; i++) {
+    if (isNarcissistic(i)) {
+      console.log(i);
+    }
   }
 }
 
-function isPrime(number) {
-  if (number === 1) return false;
-  const sqrtNumber = Math.sqrt(number);
-  for (let i = 2; i <= sqrtNumber; i++) {
-    if (number % i === 0) {
-      return false;
-    }
+// 回傳數字是幾位數
+function digitsCount(number) {
+  let n = number;
+  if (n === 0) return 1;
+  let res = 0;
+  while (n !== 0) {
+    n = Math.floor(n / 10);
+    res++;
   }
-  return true;
+  return res;
+}
+
+function isNarcissistic(number) {
+  let m = number;
+  const digits = digitsCount(m);
+  let sum = 0;
+  while (m !== 0) {
+    // eslint-disable-next-line
+    const num = m % 10;
+    sum += num ** digits;
+    m = Math.floor(m / 10);
+  }
+  return sum === number;
 }
