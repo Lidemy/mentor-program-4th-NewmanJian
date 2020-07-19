@@ -18,8 +18,8 @@ function printStar(n) {
   console.log(res);
 }
 
-function solve(line) {
-  for (let i = 1; i <= line; i += 1) {
+function solve(input) {
+  for (let i = 1; i <= input; i += 1) {
     printStar(i);
   }
 }
