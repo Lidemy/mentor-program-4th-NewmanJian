@@ -49,8 +49,7 @@ function isNarcissistic(number) {
   const digits = digitsCount(m);
   let sum = 0;
   while (m !== 0) {
-    // eslint-disable-next-line
-    let num = m % 10;
+    const num = m % 10;
     sum += num ** digits;
     m = Math.floor(m / 10);
   }
