@@ -27,11 +27,11 @@ function solve(lines) {
   }
 }
 
-function isPrime(n) {
-  if (n === 1) return false;
-  const num = Math.sqrt(n);
-  for (let i = 2; i <= num; i++) {
-    if (n % 1 === 0) {
+function isPrime(number) {
+  if (number === 1) return false;
+  const sqrtNumber = Math.sqrt(number);
+  for (let i = 2; i <= sqrtNumber; i++) {
+    if (number % i === 0) {
       return false;
     }
   }
