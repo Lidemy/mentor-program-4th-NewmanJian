@@ -9,46 +9,31 @@ const rl = readline.createInterface({
 
 const lines = [];
 
+// 讀取到一行，先把這一行加進去 lines 陣列，最後再一起處理
 rl.on('line', (line) => {
   lines.push(line);
 });
 
-// eslint-disable-next-line
-function solve(input) {
-  const temp = input[0].split('');
-  const n = Number(temp[0]);
-  const m = Number(temp[1]);
-  for (let i = n; i <= m; i++) {
-    if (isNarcissistic(i)) {
-      console.log(i);
-    }
-  }
-}
-
-function digitsCount(number) {
-  let n = number;
-  if (n === 0) return 1;
-  let res = 0;
-  while (n !== 0) {
-    n = Math.floor(n / 10);
-    res++;
-  }
-  return res;
-}
-
-function isNarcissistic(number) {
-  const n = number;
-  let m = n;
-  const digits = digitsCount(m);
-  let sum = 0;
-  while (m !== 0) {
-    const num = m % 10;
-    sum += num ** digits;
-    m = Math.floor(n / 10);
-  }
-  return sum === number;
-}
-
+// 輸入結束，開始針對 lines 做處理
 rl.on('close', () => {
   solve(lines);
 });
+
+// 上面都不用管，只需要完成這個 function 就好，可以透過 lines[i] 拿取內容
+// eslint-disable-next-line
+function solve(lines) {
+  for (let i = 1; i < lines.length; i++) {
+    console.log(isPrime(Number(lines[i])) ? 'Prime' : 'Composite');
+  }
+}
+
+function isPrime(number) {
+  if (number === 1) return false;
+  const sqrtNumber = Math.sqrt(number);
+  for (let i = 2; i <= sqrtNumber; i++) {
+    if (number % i === 0) {
+      return false;
+    }
+  }
+  return true;
+}
