@@ -23,8 +23,8 @@ rl.on('close', () => {
 // eslint-disable-next-line
 function solve(lines) {
   const n = Number(lines[0]);
-  const [a, b, k] = lines[0].split('');
   for (let i = 1; i <= n; i++);
+  const [a, b, k] = lines[0].split('');
   console.log(compare(a, b, k));
 }
 
