@@ -37,11 +37,8 @@ function compare(a, b, k) {
     b = temp;
   }
 
-  const lengthA = a.length;
-  const lengthB = b.length;
-
-  if (lengthA !== lengthB) {
-    return lengthA > lengthB ? 'A' : 'B';
+  if (a.length !== b.length) {
+    return a.length > b.length ? 'A' : 'B';
   }
   return a > b ? 'A' : 'B';
 }
