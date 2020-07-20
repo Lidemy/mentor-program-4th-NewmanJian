@@ -23,22 +23,31 @@ rl.on('close', () => {
 // eslint-disable-next-line
 function solve(lines) {
   const n = Number(lines[0]);
-  for (let i = 1; i <= n; i++);
-  const [a, b, k] = lines[0].split('');
-  console.log(compare(a, b, k));
+  for (let i = 1; i <= n; i++) {
+    const [a, b, k] = lines[i].split(' ');
+    console.log(compare(a, b, k));
+  }
 }
 
 function compare(a, b, k) {
-  if (a === b) return 'DRAW';
+  if (a === b) {
+    return 'DRAW';
+  }
 
-  if (k === -1) {
-    const temp = a;
+  // 如果是要比小，就把 a, b 的值對調
+  // eslint-disable-next-line
+  if (k == -1) {
+    // eslint-disable-next-line
+    let temp = a;
     a = b;
     b = temp;
   }
 
+  // 假設都是比大
+  // 如果 a, b 的長度不同，就是「長度比較長的贏」
   if (a.length !== b.length) {
     return a.length > b.length ? 'A' : 'B';
   }
+  // 如果 a, b 的長度相同，就直接比較「字典序」即可
   return a > b ? 'A' : 'B';
 }
