@@ -21,7 +21,7 @@
    > git commit -am week1 **在交作業前檢查是否都沒問題**
 
 8. 將檔案推到 GitHub 自己遠端的repo
-   > git push orgin week1 
+   > git push origin week1 
  
 9. 開啟 GitHub 點 pull request
 
